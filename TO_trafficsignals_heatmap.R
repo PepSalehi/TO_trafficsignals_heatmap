@@ -47,6 +47,7 @@ k2 <- kde2d(coords$newX, coords$newY, n=500)
 
 # Create exponential transparency vector and add
 alpha <- seq.int(0.5, 0.95, length.out=100)
+alpha <- exp(alpha^6-1)
 cols2 <- addalpha(cols, alpha)
 
 # Plot
